@@ -1,0 +1,25 @@
+{
+  "name": "AutoIngest",
+  "version": "0.1.0",
+  "description": "An application to automatically ingest media from removeable drives on Windows",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "buildwin": ""
+  },
+  "repository": "https://git.monoxane.com/monoxane/AutoIngest",
+  "keywords": [
+    "Media"
+  ],
+  "author": "Oliver Herrmann",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^2.0.0",
+    "electron-packager": "^12.1.0",
+    "electron-rebuild": "^1.7.3"
+  },
+  "dependencies": {
+    "drivelist": "^6.2.2",
+    "usb-detection": "^3.1.0"
+  }
+}

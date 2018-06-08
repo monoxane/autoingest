@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>AutoIngest</title>
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="css/autoingest.css">
+    <script>
+      require('./logicIngest.js')
+
+
+    </script>
+  </head>
+  <body>
+    <h1>AutoIngest</h1>
+    <script>
+    const drivelist = require('drivelist');
+    const usbDetect = require('usb-detection');
+    usbDetect.startMonitoring();
+    usbDetect.on('add', function(device) {drivelist.list((error, drives) => {if (error) {throw error;}drives.forEach((drive) => {console.log(drive, device);});});});
+    </script>
+
+
+    <h2>App Info</h2>
+    AppVer <script>document.write(appver)</script>,
+    Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>
+
+  </body>
+</html>
